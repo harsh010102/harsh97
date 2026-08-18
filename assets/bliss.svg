@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a5cc4"/>
+      <stop offset="0.42" stop-color="#3f86dd"/>
+      <stop offset="0.70" stop-color="#8fc0f2"/>
+      <stop offset="1" stop-color="#d3e8fb"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#93c94f"/>
+      <stop offset="0.5" stop-color="#5fa235"/>
+      <stop offset="1" stop-color="#3b7724"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.32" cy="0.62" r="0.5">
+      <stop offset="0" stop-color="#c8ea86" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#c8ea86" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="13"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- clouds -->
+  <g fill="#ffffff" filter="url(#soft)">
+    <g opacity="0.95">
+      <ellipse cx="360" cy="215" rx="120" ry="34"/><ellipse cx="440" cy="195" rx="90" ry="40"/>
+      <ellipse cx="290" cy="230" rx="80" ry="30"/><ellipse cx="500" cy="225" rx="70" ry="26"/>
+    </g>
+    <g opacity="0.9">
+      <ellipse cx="950" cy="150" rx="150" ry="38"/><ellipse cx="1040" cy="135" rx="95" ry="44"/>
+      <ellipse cx="860" cy="165" rx="85" ry="30"/>
+    </g>
+    <g opacity="0.8">
+      <ellipse cx="1300" cy="320" rx="120" ry="30"/><ellipse cx="1230" cy="335" rx="80" ry="26"/>
+    </g>
+    <g opacity="0.7">
+      <ellipse cx="700" cy="360" rx="130" ry="26"/><ellipse cx="780" cy="350" rx="80" ry="22"/>
+    </g>
+    <g opacity="0.6">
+      <ellipse cx="150" cy="430" rx="120" ry="22"/>
+    </g>
+  </g>
+
+  <!-- rolling green hill -->
+  <path d="M0,700 C 260,590 560,560 870,612 C 1140,657 1380,712 1600,694 L1600,1000 L0,1000 Z" fill="url(#hill)"/>
+  <!-- sunlit sheen on the hill -->
+  <path d="M0,700 C 260,590 560,560 870,612 C 1140,657 1380,712 1600,694 L1600,1000 L0,1000 Z" fill="url(#sun)"/>
+  <!-- bright ridge line -->
+  <path d="M0,700 C 260,590 560,560 870,612 C 1140,657 1380,712 1600,694" fill="none" stroke="#c9ee88" stroke-width="5" opacity="0.55"/>
+</svg>

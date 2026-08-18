@@ -60,26 +60,28 @@
     el.querySelector(".window-body").appendChild(host);
   }
   function openPost(p) {
+    const bar = '<div class="post-top"><a href="' + p.url + '" target="_blank" rel="noopener">' +
+      (p.linkLabel || "Read this on my blog") + " &#8599;</a></div>";
     WM.open({ id: "post-" + p.id, title: p.title + " - WordPad", iconKey: "doc",
-      bodyHTML: p.html + '<p class="read-on"><a href="' + p.url + '" target="_blank" rel="noopener">Read this on my blog &#8599;</a></p>',
-      width: 560 });
+      bodyHTML: bar + p.html, width: 560 });
   }
 
   /* Display Properties easter egg — recolor the desktop */
   const WALLPAPERS = [
-    ["Teal (default)", "#008080"], ["Desert", "#b48a5a"], ["Slate", "#4a5b6a"],
-    ["Midnight", "#0b1e3b"], ["Rose", "#7a4a55"], ["Forest", "#2f5d3a"],
+    ["Bliss (green hills)", ""], ["Teal", "#008080"], ["Desert", "#b48a5a"],
+    ["Slate", "#4a5b6a"], ["Midnight", "#0b1e3b"], ["Rose", "#7a4a55"],
   ];
+  function setWallpaper(c) { document.getElementById("desktop").style.background = c ? c : ""; }
   function openDisplay() {
-    const swatches = WALLPAPERS.map((w, i) =>
-      '<button class="wp" data-c="' + w[1] + '" title="' + w[0] + '" style="width:44px;height:30px;margin:3px;background:' + w[1] + '"></button>'
-    ).join("");
+    const swatches = WALLPAPERS.map((w) => {
+      const bg = w[1] ? w[1] : "url('assets/bliss.svg') center/cover";
+      return '<button class="wp" data-c="' + w[1] + '" title="' + w[0] + '" style="width:46px;height:32px;margin:3px;background:' + bg + '"></button>';
+    }).join("");
     const el = WM.open({ id: "display", title: "Display Properties", iconKey: "computer",
       bodyHTML: '<div style="padding:6px"><fieldset><legend>Background</legend>' +
-        '<p style="margin:.3em 0">Pick a desktop colour:</p><div style="display:flex;flex-wrap:wrap">' + swatches + "</div></fieldset>" +
-        '<p class="hint" style="margin-top:8px">Yes, this actually works. Try it. 🎨</p></div>', width: 320 });
-    el.querySelectorAll(".wp").forEach((btn) =>
-      btn.addEventListener("click", () => document.documentElement.style.setProperty("--teal", btn.dataset.c)));
+        '<p style="margin:.3em 0">Pick a desktop background:</p><div style="display:flex;flex-wrap:wrap">' + swatches + "</div></fieldset>" +
+        '<p class="hint" style="margin-top:8px">Yes, this actually works. Try it. 🎨</p></div>', width: 340 });
+    el.querySelectorAll(".wp").forEach((btn) => btn.addEventListener("click", () => setWallpaper(btn.dataset.c)));
   }
 
   /* ---------- app registry (shared with Start menu & context menu) ---------- */

@@ -135,6 +135,42 @@ const BLOG = [
       <p>"Unlearning" is becoming a compliance checkbox, and my thesis is a small argument that the checkbox can lie. Looking <i>inside</i> the model reveals that most "forgotten" facts are merely hidden — and gives us a more faithful way to measure the difference. As these systems move into products and regulation, the gap between <i>looking</i> forgotten and <i>being</i> forgotten is going to matter a lot.</p>`,
   },
   {
+    id: "post-av",
+    title: "Can a Self-Driving Car Explain Its Way into Your Trust?",
+    date: "May 6, 2025",
+    url: "https://harsh010102.github.io/portfolio/av-explainability/",
+    linkLabel: "See the project page",
+    html: `
+      <h2>Can a Self-Driving Car Explain Its Way into Your Trust?</h2>
+      <p class="byline">May 6, 2025 · ~6 min · TU Munich, with Bernadett Hoszu &amp; Josh Haberkern</p>
+      <p>People don't distrust self-driving cars because the driving is bad. They distrust them because the car won't <i>say anything</i>. It brakes, it waits, it swerves — and you're left guessing why. The research is blunt about this: <b>perceived explainability moves trust more than perceived usefulness or ease of use</b> (Zhang et al., 2024). Being a good driver isn't enough; the car has to be <i>legible</i>.</p>
+      <p>So we asked a simple question: if the car narrates what it's doing, in real time, in plain language generated on the fly — do people actually trust it more? And does it matter whether that narration arrives as <b>subtitles</b> or as a <b>voice</b>?</p>
+      <h3>The pipeline: from dashcam frames to a sentence worth hearing</h3>
+      <p>We turned point-of-view driving videos into a live stream of explanations:</p>
+      <ul>
+        <li><b>Frames</b> — one every 2 seconds via OpenCV. Any faster and the explanations pile into noise.</li>
+        <li><b>Caption generation</b> — a proper bake-off: BLIP, CLIP, LLaVA 1.5, LLaMA-4 Maverick, and <b>Kimi-VL</b>. The surprise winner was Kimi-VL: at just 2.8B parameters it was the fastest <i>and</i> the most precise, beating models 5× its size. (GPT-4o-mini was, for the record, the worst.)</li>
+        <li><b>Refinement</b> — raw captions are verbose and robotic, so a second LLM pass distilled them into short, human phrasing. Against GPT-4o and Gemini 2.0 Flash, <b>Claude 3.7 Sonnet</b> wrote the most natural, concise lines.</li>
+        <li><b>Delivery</b> — the refined message was either burned in as a <b>subtitle</b> or spoken aloud via text-to-speech.</li>
+      </ul>
+      <h3>The experiment</h3>
+      <p>Two within-subjects studies, 22 people total: 12 watched a drive with and without <b>text</b> captions, 10 with and without <b>audio</b>. Everyone rated trust and comfort before and after, so each person was their own baseline.</p>
+      <h3>What the numbers said</h3>
+      <p>Explanations helped — modestly. Text nudged mean trust/comfort from <b>3.08 → 3.25</b>; audio from <b>3.60 → 3.90</b>. Individually, 6 of 12 gained trust from captions (2 lost it, 4 unchanged); 4 of 10 gained from audio. Real, but no landslide.</p>
+      <h3>The finding I actually care about: explanation is a double-edged sword</h3>
+      <p>The averages hide the interesting part — the <i>same feature</i> that built trust also annoyed people:</p>
+      <ul>
+        <li><b>Text</b> was clear but intrusive: 5 of 12 said constant captions would distract or tire them on a longer ride, and some found them redundant even after we'd trimmed them.</li>
+        <li><b>Audio</b> kept eyes on the road but grated: 6 of 10 found it annoying in calm moments — it fought with music and conversation, narrated the obvious, and the monotone TTS voice itself put people off. One participant nailed the tension: an AV should <i>"feel more like a taxi"</i>, and constant narration can paradoxically make it feel <i>less</i> autonomous.</li>
+      </ul>
+      <p>But in a genuinely dangerous moment — a child stepping into the street — that <i>same</i> audio line became reassuring: proof the car had seen what you saw.</p>
+      <h3>So the answer isn't "explain more"</h3>
+      <p>It's <b>explain at the right time</b>. The trust win comes from context-sensitivity, not volume: speak up when risk is high, stay quiet when the drive is boring, let people choose their modality, and use a voice that doesn't sound like a 1998 GPS. My favourite participant suggestion: <b>silent by default, explain on request.</b></p>
+      <h3>Keeping it honest</h3>
+      <p>Small samples (12 and 10), pre-recorded videos rather than a real car, one-size-fits-all explanations, and a robotic TTS voice that probably dragged the audio scores down on its own. Trends, not laws.</p>
+      <p>What ties this to the rest of my work: a well-intentioned feature can quietly backfire, and the only way to know is to measure what users actually <i>feel</i> — not the thing that's easy to count.</p>`,
+  },
+  {
     id: "post-mpi",
     title: "Thesis to Tangible: MPI-SWS Fellowship",
     file: "mpi-sws.txt",
