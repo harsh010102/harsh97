@@ -47,6 +47,18 @@ const ICONS = {
     <path d="M5 10 H27 M5 22 H27" stroke="#dff0ff" fill="none" opacity="0.8"/>
     <path d="M9 9 q3 3 1 6 q4 2 2 6 q3 1 5 4" fill="none" stroke="#2f6b2f" stroke-width="2" opacity="0.7"/></svg>`,
 
+  palette: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 5 C9 5 4 9 4 15 c0 4 3 7 7 7 c1.6 0 2.4 -1.2 4 -1.2 c1.8 0 2.6 1.5 2.6 3.1 c0 2 3 2.9 5.4 1.5 C27 24.5 29 20 29 15 C29 9 23 5 16 5 Z" fill="#e6b878" stroke="#000"/>
+    <ellipse cx="10.5" cy="18" rx="2.2" ry="1.6" fill="#7a4a12"/>
+    <circle cx="10.5" cy="11" r="2" fill="#2a78d6" stroke="#000" stroke-width="0.4"/>
+    <circle cx="16" cy="9" r="2" fill="#e34948" stroke="#000" stroke-width="0.4"/>
+    <circle cx="21" cy="10" r="2" fill="#eda100" stroke="#000" stroke-width="0.4"/>
+    <circle cx="24" cy="14.5" r="2" fill="#1baf7a" stroke="#000" stroke-width="0.4"/>
+    <circle cx="19.5" cy="15.5" r="1.8" fill="#e87ba4" stroke="#000" stroke-width="0.4"/>
+    <line x1="17" y1="21" x2="29" y2="30" stroke="#9a6a2a" stroke-width="2.4"/>
+    <path d="M15.4 19.6 l2.6 2.6 -1.5 1.5 -2.6 -2.6 Z" fill="#c8c8c8" stroke="#000" stroke-width="0.4"/>
+    <path d="M13.9 21.1 l1.8 1.8 -1.2 1.2 -1.8 -1.8 Z" fill="#eb6834"/></svg>`,
+
   pdf: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
     <path d="M7 3 h12 l6 6 v20 H7 Z" fill="#ffffff" stroke="#000"/>
     <path d="M19 3 v6 h6" fill="#dfe3e6" stroke="#000"/>
@@ -181,6 +193,10 @@ const PROJECTS = [
     url: "https://harsh010102.github.io/skypulse-copilot/",
     repo: "https://github.com/harsh010102/skypulse-copilot",
     desc: "A RAG + tool-use agent over satellite / climate tiles (MPI-SWS SkyPulse): LangGraph + Claude + Chroma, with an evaluation harness." },
+  { id: "creativity-lab", label: "Creativity Lab", icon: "palette",
+    url: "https://harsh010102.github.io/llm-creativity-lab/",
+    repo: "https://github.com/harsh010102/llm-creativity-lab",
+    desc: "Interactive companion to my TUM paper 'Measuring Creativity in LLMs' — drive the deterministic, judge-free novelty framework on any text you paste, live in the browser." },
 ];
 
 /* ---------- about + contact ---------- */
