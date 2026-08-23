@@ -224,9 +224,8 @@ const ABOUT_HTML = `
 
 const CONTACT = [
   { label: "GitHub", href: "https://github.com/harsh010102" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/harsh-parikh-010102/" },
-  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=" },
-  { label: "Email", href: "mailto:nisargnileshpanchal@gmail.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/harshparikh2002/" },
+  { label: "Email", href: "mailto:harsh.parikh@tum.de" },
 ];
 
 const README_HTML = `
