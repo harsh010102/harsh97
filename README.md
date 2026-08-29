@@ -1,4 +1,4 @@
-# Harsh 97 🖥️
+# Harsh Portfolio 🖥️
 
 My portfolio, dressed up as a late-90s desktop OS in the browser. Double-click the icons.
 

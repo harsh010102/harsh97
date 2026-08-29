@@ -39,7 +39,7 @@
     menu.innerHTML = "";
     const side = document.createElement("div");
     side.className = "start-side";
-    side.innerHTML = "<span>Harsh&nbsp;<b>97</b></span>";
+    side.innerHTML = "<span>Harsh&nbsp;<b>Portfolio</b></span>";
 
     const list = document.createElement("ul");
     list.className = "start-list";

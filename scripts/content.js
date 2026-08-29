@@ -1,4 +1,4 @@
-/* content.js — all data + inline pixel-art SVG icons for Harsh 97.
+/* content.js — all data + inline pixel-art SVG icons for Harsh Portfolio.
    Icons are original homages to the Win9x style (not Microsoft's copyrighted art),
    drawn as small SVGs so the whole site stays self-contained. */
 
@@ -230,7 +230,7 @@ const CONTACT = [
 
 const README_HTML = `
   <div class="readme">
-    <p><b>Welcome to Harsh&nbsp;97.</b> 🖥️</p>
+    <p><b>Welcome to Harsh&nbsp;Portfolio.</b> 🖥️</p>
     <p>This is my portfolio, dressed up as a late-90s desktop. Poke around like you would a real machine:</p>
     <ul>
       <li>📁 <b>Double-click</b> icons to open them (single-tap on mobile).</li>
